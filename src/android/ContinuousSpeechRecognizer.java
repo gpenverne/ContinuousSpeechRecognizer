@@ -193,12 +193,6 @@ public class ContinuousSpeechRecognizer extends CordovaPlugin {
         public void onBufferReceived(byte[] buffer) {
         }
         public void onEndOfSpeech() {
-            cordova.getActivity().runOnUiThread(new Runnable() {
-                public void run() {
-                    sr.stopListening();
-                    sr.startListening(intent);
-                }
-            });
         }
         public void onError(int error) {
             if(AppStatus.isActivityVisible()) {
