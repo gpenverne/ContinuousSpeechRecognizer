@@ -44,12 +44,10 @@ public class ContinuousSpeechRecognizer extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
         Boolean isValidAction = true;
         this.callbackContext = callbackContext;
-        this.callbackContext.error(action);
         if ("startRecognize".equals(action)) {
             startSpeechRecognitionActivity(args);
         } else if("resumeRecognize".equals(action)) {
             resumeSpeechRecognitionActivity(args);
-            this.callbackContext.error('ok!');
         } else if ("getSupportedLanguages".equals(action)) {
             getSupportedLanguages();
         } else {
