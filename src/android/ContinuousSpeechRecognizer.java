@@ -68,7 +68,7 @@ public class ContinuousSpeechRecognizer extends CordovaPlugin {
 
     private void resumeSpeechRecognitionActivity(JSONArray args) {
         sr.stopListening();
-        self.startSpeechRecognitionActivity(args);
+        startSpeechRecognitionActivity(args);
     }
 
     /**
